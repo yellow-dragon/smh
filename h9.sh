@@ -13,5 +13,5 @@ while true; do
     else
         echo "$(date): $MINER_NAME đang chạy."
     fi
-    sleep 10 # Lặp lại mỗi 5 phút (300 giây)
+    sleep 300 # Lặp lại mỗi 5 phút (300 giây)
 done
