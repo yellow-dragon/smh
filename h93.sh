@@ -1,5 +1,5 @@
 #!/bin/bash
-/app-data/miners/h93.sh
+/app-data/miners/killh93.sh
 # Đường dẫn đến thư mục chứa phần mềm
 cd /app-data/miners/linux
 
