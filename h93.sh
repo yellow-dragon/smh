@@ -12,7 +12,7 @@ check_and_run() {
   if ! ps aux | grep "$PROCESS_NAME" | grep -v grep > /dev/null
   then
     echo "$PROCESS_NAME không chạy, khởi động lại..."
-    ./h9-miner-spacemesh-linux-cuda-amd64 -gpuServer -license yes
+    screen ./h9-miner-spacemesh-linux-cuda-amd64 -gpuServer -license yes
   else
     echo "$PROCESS_NAME đang chạy."
   fi
