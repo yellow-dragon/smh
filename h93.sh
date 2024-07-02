@@ -4,7 +4,7 @@
 cd /app-data/miners/linux
 
 # Tên của tiến trình
-PROCESS_NAME="h9-miner-spacemesh-linux-amd64"
+PROCESS_NAME="h9-miner-spacemesh-linux-cuda-amd64"
 
 # Hàm kiểm tra và khởi động lại phần mềm nếu không chạy
 check_and_run() {
