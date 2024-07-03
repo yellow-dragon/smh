@@ -1,17 +1,26 @@
 #!/bin/bash
 
-# Đường dẫn tới phần mềm
-MINER_PATH="/app-data/miners/linux"
-MINER_NAME="h9-miner-spacemesh-linux-amd64"
-COMMAND="screen ./$MINER_NAME -gpuServer -license yes"
+# Đường dẫn đến thư mục chứa phần mềm
+cd /app-data/miners/linux
 
-# Kiểm tra và chạy phần mềm
-while true; do
-    if ! pgrep -f $MINER_NAME > /dev/null; then
-        echo "$(date): $MINER_NAME không chạy, khởi động lại..."
-        cd $MINER_PATH && $COMMAND
-    else
-        echo "$(date): $MINER_NAME đang chạy."
-    fi
-    sleep 300 # Lặp lại mỗi 5 phút (300 giây)
+# Tên của tiến trình
+PROCESS_NAME="h9-miner-spacemesh-linux-cuda-amd64"
+
+# Hàm kiểm tra và khởi động lại phần mềm nếu không chạy
+check_and_run() {
+  # Kiểm tra nếu tiến trình đang chạy
+  if ! ps aux | grep "$PROCESS_NAME" | grep -v grep > /dev/null
+  then
+    echo "$PROCESS_NAME không chạy, khởi động lại..."
+    screen -S H9 -dm bash -c "./h9-miner-spacemesh-linux-cuda-amd64 -gpuServer -license yes"
+  else
+    echo "$PROCESS_NAME đang chạy."
+  fi
+}
+
+# Vòng lặp kiểm tra và khởi động lại mỗi 5 phút
+while true
+do
+  check_and_run
+  sleep 5 # Chờ 5 phút (300 giây)
 done
