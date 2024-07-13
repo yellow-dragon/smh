@@ -14,5 +14,8 @@ chmod +x killh9.sh
 rm -f h9.sh 
 wget https://raw.githubusercontent.com/yellow-dragon/smh/main/h9.sh 
 chmod +x h9.sh
+rm -f h9c.sh 
+wget https://raw.githubusercontent.com/yellow-dragon/smh/main/h9c.sh 
+chmod +x h9c.sh
 
 
