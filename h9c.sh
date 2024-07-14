@@ -22,5 +22,5 @@ check_and_run() {
 while true
 do
   check_and_run
-  sleep 5 # Chờ 5 phút (300 giây)
+  sleep 300 # Chờ 5 phút (300 giây)
 done
