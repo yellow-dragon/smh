@@ -19,8 +19,8 @@ check_and_run() {
 }
 
 # Vòng lặp kiểm tra và khởi động lại mỗi 5 phút
-while true
-do
-  check_and_run
-  sleep 300 # Chờ 5 phút (300 giây)
-done
+#while true
+#do
+  #check_and_run
+  #sleep 300 # Chờ 5 phút (300 giây)
+#done
