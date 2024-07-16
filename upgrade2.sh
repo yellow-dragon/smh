@@ -4,7 +4,12 @@ killall h92.sh
 killall h93.sh
 killall h9-miner-spacemesh-linux-amd64 
 killall h9-miner-spacemesh-linux-cuda-amd64
-cd /app-data/miners 
+cd /app-data/miners
+if [ ! -f "H9-Miner-spacemesh-v4.0.0-5-linux.zip" ]; then
+    wget https://github.com/h9-dev/spacemesh-miner/releases/download/v4.0.0/H9-Miner-spacemesh-v4.0.0-5-linux.zip
+    rm -rf linux
+    unzip H9-Miner-spacemesh-v4.0.0-5-linux.zip
+fi
 #rm -f H9-Miner-spacemesh-v4.0.0-5-linux.zip && rm -rf linux
 #wget https://github.com/h9-dev/spacemesh-miner/releases/download/v4.0.0/H9-Miner-spacemesh-v4.0.0-5-linux.zip 
 #unzip H9-Miner-spacemesh-v4.0.0-5-linux.zip 
@@ -17,8 +22,4 @@ chmod +x h9.sh
 rm -f h9c.sh 
 wget https://raw.githubusercontent.com/yellow-dragon/smh/main/h9c.sh 
 chmod +x h9c.sh
-cd /app-data/miners/linux
-rm -f config.yaml
-wget https://raw.githubusercontent.com/yellow-dragon/smh/main/config.yaml
-
 
