@@ -18,6 +18,8 @@ check_and_run() {
   fi
 }
 
+check_and_run
+
 # Vòng lặp kiểm tra và khởi động lại mỗi 5 phút
 #while true
 #do
