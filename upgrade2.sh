@@ -23,3 +23,8 @@ rm -f h9c.sh
 wget https://raw.githubusercontent.com/yellow-dragon/smh/main/h9c.sh 
 chmod +x h9c.sh
 
+cd /app-data/miners/linux
+rm -f config.yaml
+wget https://raw.githubusercontent.com/yellow-dragon/smh/main/config.yaml
+
+
