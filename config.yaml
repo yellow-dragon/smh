@@ -49,7 +49,7 @@ proxy:
 extraParams:
     # 不填写用全部GPU设备，集成显卡默认也会添加，如果需要排除，需要手动设置设备列表
     # If not filled in, use all GPU devices. Integrated graphics cards will also be added by default. If you need to exclude, you need to manually set the device list
-    device: "0,1,2,3,4,5"
+    device: "0,1,2,3,4"
 
     # 文件大小，GB
     # file size, GB
