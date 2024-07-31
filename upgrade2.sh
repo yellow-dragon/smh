@@ -5,10 +5,10 @@ killall h93.sh
 killall h9-miner-spacemesh-linux-amd64 
 killall h9-miner-spacemesh-linux-cuda-amd64
 cd /app-data/miners
-if [ ! -f "H9-Miner-spacemesh-v4.0.0-5-linux.zip" ]; then
-    wget https://github.com/h9-dev/spacemesh-miner/releases/download/v4.0.0/H9-Miner-spacemesh-v4.0.0-5-linux.zip
+if [ ! -f "H9-Miner-spacemesh-v4.0.1-1-linux.zip" ]; then
+    wget https://github.com/h9-dev/spacemesh-miner/releases/download/v4.0.0/H9-Miner-spacemesh-v4.0.1-1-linux.zip
     rm -rf linux
-    unzip H9-Miner-spacemesh-v4.0.0-5-linux.zip
+    unzip H9-Miner-spacemesh-v4.0.1-1-linux.zip
 fi
 #rm -f H9-Miner-spacemesh-v4.0.0-5-linux.zip && rm -rf linux
 #wget https://github.com/h9-dev/spacemesh-miner/releases/download/v4.0.0/H9-Miner-spacemesh-v4.0.0-5-linux.zip 
